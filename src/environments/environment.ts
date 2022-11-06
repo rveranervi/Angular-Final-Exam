@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  company: 'RICARDO A. VERA NERVI',
+  author: 'RICARDO A. VERA NERVI',
   appName: 'EXAMEN DE ANGULAR',
-  apiUrl: 'http://localhost:8080'
+  apiUrl: 'http://localhost:3000'
 };
 
 /*

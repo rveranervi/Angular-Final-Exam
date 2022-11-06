@@ -1,0 +1,42 @@
+<!-- Page Content-->
+<section class="pt-5">
+    <div class="d-grid gap-2 d-md-block mx-auto text-center">
+        <h1 class="fw-bolder">Peliculas</h1>
+        <button class="btn btn-success" (click)="this.showDialog()">Agregar nueva pelicula</button>
+    </div>
+</section>
+<!-- Blog preview section-->
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5">
+            <div class="col-lg-3 mb-5" *ngFor="let entry of this.entries">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="{{ entry.imagen }}" alt="{{ entry.nombre }}" />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Director: {{ entry.director }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Genero: {{ entry.genero }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Pais: {{ entry.pais }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">
+                            <i class="pi pi-star" *ngFor="let n of [].constructor(10-entry.calificacion)"></i> 
+                            <i class="pi pi-star-fill" *ngFor="let n of [].constructor(entry.calificacion)"></i> 
+                        </div> 
+                        <div class="h5 card-title mb-3">{{ entry.nombre }}</div>
+                        <button class="btn btn-danger" (click)="this.removeEntry(entry.id)">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-5 mb-xl-0" *ngIf="showCharging">
+            <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+        </div>
+        <div class="text-end mb-5 mb-xl-0 text-center" *ngIf="!showCharging">
+            <button [hidden]="!showMore" class="btn btn-primary" (click)="this.getMoreEntries()">Ver más</button>
+        </div>
+    </div>
+</section>
+<p-dialog [(visible)]="display" [header]="'Nueva pelicula'" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+    Content
+</p-dialog>
+<p-confirmDialog [header]="'Eliminar pelicula'" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+    ¿Seguro de eliminar la pelicula?
+</p-confirmDialog>

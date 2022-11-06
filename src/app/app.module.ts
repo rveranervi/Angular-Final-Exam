@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { JwtModule } from "@auth0/angular-jwt";
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -19,20 +18,13 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { AppComponent } from './app.component';
 import { MainComponent as PublicComponent } from './pages/public/main/main.component';
 import { HomeComponent } from './pages/public/home/home.component';
-import { AboutComponent } from './pages/public/about/about.component';
-import { PricingComponent } from './pages/public/pricing/pricing.component';
-import { FaqComponent } from './pages/public/faq/faq.component';
-import { BlogComponent } from './pages/public/blog/blog.component';
 import { LoginComponent } from './pages/public/login/login.component';
-import { RegisterComponent } from './pages/public/register/register.component';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TrainingComponent } from './pages/public/training/training.component';
+import { MoviesComponent } from './pages/public/movies/movies.component';
+import { ShopComponent } from './pages/public/shop/shop.component';
+import { SearchComponent } from './pages/public/search/search.component';
 
-
-export function tokenGetter() {
-  return localStorage.getItem("access_token");
-}
 
 export function createTranslateLoader(http: HttpClient) {
   TranslateHttpLoader
@@ -44,25 +36,15 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     PublicComponent,
     HomeComponent,
-    AboutComponent,
-    PricingComponent,
-    FaqComponent,
-    BlogComponent,
     LoginComponent,
-    RegisterComponent,
-    TrainingComponent
+    MoviesComponent,
+    ShopComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        allowedDomains: ["example.com","localhost"],
-        disallowedRoutes: ["http://example.com/examplebadroute/"],
-      },
-    }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

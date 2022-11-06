@@ -86,10 +86,6 @@ export class MainComponent implements OnInit {
     return environment.appName
   }
 
-  getCompanyNameEnvironment() {
-    return environment.company
-  }
-
   logout() {
     localStorage.removeItem('displayName')
     localStorage.removeItem('token')

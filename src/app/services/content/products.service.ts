@@ -1,19 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Student } from 'src/app/interfaces/User/student';
+import { ProductEntry } from 'src/app/interfaces/content/products';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentService {
+export class ProductsService {
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
-  list(): Observable<Student[]> {
-    return this.httpClient.get<Student[]>(environment.apiUrl + '/school/student/list');
+  list(limit: number, init: number): Observable<ProductEntry[]> {
+    return this.httpClient.get<ProductEntry[]>(environment.apiUrl + '/products');
   }
+
 }

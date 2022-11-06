@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('displayName', (response.displayName || ''))
       localStorage.setItem('token', (response.token || ''))
       this.messageService.add({severity:'success', summary: 'Correcto', detail:'Inicio sesión correctamente.'});
-      this.router.navigate(['/panel'])
     },
     (error: HttpErrorResponse) => {
       this.messageService.add({severity:'error', summary: 'Ocurrio un error', detail: error.error});
