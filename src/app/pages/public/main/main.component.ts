@@ -15,6 +15,7 @@ export class MainComponent implements OnInit {
   currentCountry: CountryConfig
   showCountries: boolean = false
   languages: LanguageConfig[] = []
+  
 
   constructor(
     private serviceCountryConfig: CountriesConfigService,
@@ -29,11 +30,6 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.document.body.setAttribute('class', '')
-    this.document.body.classList.add('d-flex')
-    this.document.body.classList.add('flex-column')
-    this.document.body.classList.add('h-100')
-    this.loadStyle('/assets/styles/style-public.css')
     this.loadCountryNav()
     this.loadLanguageFooter()
   }
@@ -47,20 +43,6 @@ export class MainComponent implements OnInit {
     }
     else {
       return true
-    }
-  }
-
-  loadStyle(styleName: string) {
-    const head = this.document.getElementsByTagName('head')[0];
-    let themeLink = this.document.getElementById('client-theme') as HTMLLinkElement;
-    if (themeLink) {
-      themeLink.href = styleName;
-    } else {
-      const style = this.document.createElement('link');
-      style.id = 'client-theme'
-      style.rel = 'stylesheet'
-      style.href = `${styleName}`
-      head.appendChild(style)
     }
   }
 
@@ -95,8 +77,9 @@ export class MainComponent implements OnInit {
     window.location.reload()
   }
 
-  getPhoneEnvironment() {
-    return environment.phone
+  changeCountry(country: CountryConfig) {
+    localStorage.setItem('country', country.country)
+    window.location.reload()
   }
 
   getAppNameEnvironment() {
@@ -107,8 +90,9 @@ export class MainComponent implements OnInit {
     return environment.company
   }
 
-  getPhoneEnvironmentMessage() {
-    return encodeURI('')
+  logout() {
+    localStorage.removeItem('displayName')
+    localStorage.removeItem('token')
   }
 
 }

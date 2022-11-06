@@ -2,29 +2,31 @@
     "public": {
         "nav": {
             "home": "Inicio",
-            "about": "Nosotros",
-            "pricing": "Precios",
-            "faq": "Preguntas frecuentes",
-            "resources": "Recursos",
-            "blog": "Noticias",
-            "training": "Entrenamiento",
-            "dashboard": "Panel de usuario",
-            "my_account": "Mi Cuenta",
-            "login": "inicio de sesión",
-            "register": "Registro"
+            "movies": "Peliculas",
+            "shop": "Ropa",
+            "search": "Busqueda con pipes",
+            "logout": "Cerrar sesión",
+            "login": "inicio de sesión"
         },
         "footer": {
-            "description_company": "Somos una compañia que apuesta por la información. Generamos valor con sistemas que permiten estar cerca de tus clientes.",
-            "title_links": "Enlaces de interes",
-            "privacy": "Privacidad de la información",
-            "terms": "Terminos del servicio",
-            "company": "Grupo IO Data Perú",
-            "claims": "Libro de Reclamos",
-            "title_languages": "Selecciona otro idioma",
+            "title_languages": "Seleccione otro idioma",
             "title_countries": "Paises"
         }
     },
     "home": {
-        "title": "Sistema para la gestión de centros educativos"
+        "title": "Proyecto desarrollado en Angular",
+        "subtitle": "En este proyecto de manera adicional a las vistas en clase se están agregando funciones de traducción mediante pipes con la libreria @ngx-translate, se simula una sesión de usuario y configuración multipais. Estos cambios se podran realizar desde los botones en el pie de pagina y serán visibles en esta sección.",
+        "features_title": "Secciones y ejercicios",
+        "features_one": "En esta sección se visualizará el cambio de pais y de idioma, que se podrá modificar con las opciones del footer. Adicionalmente, veremos una introducción a los distintos elementos de la página.",
+        "features_two": "Aqui vamos a desarrollar la primera parte del examen con CRUD basico de peliculas.",
+        "features_three": "En esta sección realizaremos con ayuda de routing y service un catalogo de ropa. Adicional agregaremos funciones de ecommerce.",
+        "features_four": "Realizaremos una busqueda con pipes de varios criterios a la lista de compras",
+        "features_one_title": "Sección de inicio",
+        "features_two_title": "Sección de peliculas",
+        "features_three_title": "Sección Ropa",
+        "features_four_title": "Busqueda por pipies",
+        "testimonial": "Las configuraciones de idioma, pais y usuario se encuentran almacenadas de manera local con localStorage por ejemplo el pais actual es: ",
+        "testimonial2": "Ademas esta sección cuenta con un service implementado que permite actualizar las opciones de SEO de la sección. Se puede visualizar en el componente pages/public/home",
+        "testimonial3": "En el proyecto se podrá visualizar elementos de bootstrap 5, tambien como algunos elementos de primeNG"
     }
 }

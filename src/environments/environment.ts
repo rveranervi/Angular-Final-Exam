@@ -4,10 +4,9 @@
 
 export const environment = {
   production: false,
-  company: 'IO Data Perú',
-  appName: 'SISGEDU',
-  apiUrl: 'http://localhost:8080',
-  phone: '51924578133'
+  company: 'RICARDO A. VERA NERVI',
+  appName: 'EXAMEN DE ANGULAR',
+  apiUrl: 'http://localhost:8080'
 };
 
 /*

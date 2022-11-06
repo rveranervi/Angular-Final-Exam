@@ -7,25 +7,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/">{{ 'public.nav.home' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/about">{{ 'public.nav.about' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/pricing">{{ 'public.nav.pricing' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/faq">{{ 'public.nav.faq' | translate }}</a></li>
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ 'public.nav.resources' | translate }}</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                            <li><a class="dropdown-item" rel="canonical" routerLink="/blog">{{ 'public.nav.blog' | translate }}</a></li>
-                            <li><a class="dropdown-item" rel="canonical" routerLink="/training">{{ 'public.nav.training' | translate }}</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/panel" *ngIf="this.isLogged()">{{ 'public.nav.dashboard' | translate }}</a></li>
-                    <li class="nav-item dropdown" *ngIf="!this.isLogged()">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ 'public.nav.my_account' | translate }}</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                            <li><a class="dropdown-item" rel="canonical" routerLink="/login">{{ 'public.nav.login' | translate }}</a></li>
-                            <li><a class="dropdown-item" rel="canonical" routerLink="/register">{{ 'public.nav.register' | translate }}</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/movies">{{ 'public.nav.movies' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/shop">{{ 'public.nav.shop' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/search">{{ 'public.nav.search' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" *ngIf="this.isLogged()" style="cursor: pointer;" (click)="logout()">{{ 'public.nav.logout' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" *ngIf="!this.isLogged()" rel="canonical" routerLink="/login">{{ 'public.nav.login' | translate }}</a></li>
                 </ul>
             </div>
         </div>
@@ -36,34 +22,18 @@
 <footer class="bg-dark py-4 mt-auto">
     <div class="container px-5">
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                <h6 class="h5 m-0 text-white">{{ this.getCompanyNameEnvironment() }}</h6>
-                <p class="small m-3 text-white">
-                    {{ 'public.footer.description_company' | translate }}
-                </p>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                <h6 class="h5 m-0 text-white">{{ 'public.footer.title_links' | translate }}</h6>
-                <ul class="m-2">
-                    <li><a class="link-light small" href="#!">{{ 'public.footer.privacy' | translate }}</a></li>
-                    <li><a class="link-light small" href="#!">{{ 'public.footer.terms' | translate }}</a></li>
-                    <li><a class="link-light small" href="#!">{{ 'public.footer.company' | translate }}</a></li>
-                    <li><a class="link-light small" href="#!">{{ 'public.footer.claims' | translate }}</a></li>
+            <div class="col-sm-6">
+                <h6 class="h5 m-0 text-white" *ngIf="showCountries">{{ 'public.footer.title_countries' | translate }}</h6>
+                <ul class="m-2" *ngIf="showCountries">
+                    <li *ngFor="let country of this.countries"><a class="link-light small" style="cursor: pointer;" (click)="this.changeCountry(country)">{{ country.countryLabel }}</a></li>
                 </ul>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+            <div class="col-sm-6">
                 <h6 class="h5 m-0 text-white">{{ 'public.footer.title_languages' | translate }}</h6>
                 <ul class="m-2">
                     <li *ngFor="let language of this.languages"><a class="link-light small" style="cursor: pointer;" (click)="this.changeLanguage(language)">{{ language.name }}</a></li>
-                </ul>
-                <h6 class="h5 m-0 text-white" *ngIf="showCountries">{{ 'public.footer.title_countries' | translate }}</h6>
-                <ul class="m-2" *ngIf="showCountries">
-                    <li *ngFor="let country of this.countries"><a class="link-light small" style="cursor: pointer;" href="{{ country.uri }}">{{ country.countryLabel }}</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
-<a href="https://api.whatsapp.com/send?phone={{this.getPhoneEnvironment()}}&text={{this.getPhoneEnvironmentMessage()}}" class="float-whatsapp" target="_blank">
-    <i class="pi pi-whatsapp" [classList]=""></i>
-</a>

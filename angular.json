@@ -27,16 +27,7 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              {
-                "input": "src/assets/styles/style-public.css",
-                "bundleName": "style-public",
-                "inject": false
-              },
-              {
-                "input": "src/assets/styles/style-private.css",
-                "bundleName": "style-private",
-                "inject": false
-              }
+              "src/assets/styles/style-public.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"

@@ -25,13 +25,9 @@ import { FaqComponent } from './pages/public/faq/faq.component';
 import { BlogComponent } from './pages/public/blog/blog.component';
 import { LoginComponent } from './pages/public/login/login.component';
 import { RegisterComponent } from './pages/public/register/register.component';
-import { MainComponent as PrivateComponent } from './pages/private/main/main.component';
-import { DashboardComponent } from './pages/private/dashboard/dashboard.component';
-import { ProfileComponent } from './pages/private/profile/profile.component';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TrainingComponent } from './pages/public/training/training.component';
-import { StudentsComponent } from './pages/private/students/students.component';
 
 
 export function tokenGetter() {
@@ -52,13 +48,9 @@ export function createTranslateLoader(http: HttpClient) {
     PricingComponent,
     FaqComponent,
     BlogComponent,
-    DashboardComponent,
     LoginComponent,
     RegisterComponent,
-    PrivateComponent,
-    ProfileComponent,
-    TrainingComponent,
-    StudentsComponent
+    TrainingComponent
   ],
   imports: [
     BrowserModule,

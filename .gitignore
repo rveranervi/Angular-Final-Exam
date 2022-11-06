@@ -3,6 +3,7 @@
 /dist/
 /bazel-out
 /integration/bazel/bazel-*
+.angular/
 *.log
 node_modules
 

@@ -11,6 +11,11 @@ export class CountriesConfigService {
   constructor() { }
 
   getCountries(): Observable<CountryConfig[]> {
+    /*
+    ** NOTA:
+    ** En la presente función se carga un listado de paises disponibles
+    ** para los entornos de desarrollo y producción
+    ** 
     if(!environment.production) {
       return of<CountryConfig[]>([
         {
@@ -18,18 +23,6 @@ export class CountriesConfigService {
           uri: 'http://localhost:4200',
           country: 'PE',
           countryLabel: 'Localhost'
-        },
-        {
-          name: 'localprod',
-          uri: 'http://angdev.test',
-          country: 'PE',
-          countryLabel: 'Perú DEFAULT'
-        },
-        {
-          name: 'perulocal',
-          uri: 'http://pe.angdev.test',
-          country: 'PE',
-          countryLabel: 'Perú'
         },
         {
           name: 'colombialocal',
@@ -67,9 +60,35 @@ export class CountriesConfigService {
         }
       ]);
     }
+    */
+    return of<CountryConfig[]>([
+      {
+        name: 'perulocal',
+        uri: 'http://localhost:4200',
+        country: 'PE',
+        countryLabel: 'Perú'
+      },
+      {
+        name: 'colombialocal',
+        uri: 'http://localhost:4200',
+        country: 'CO',
+        countryLabel: 'Colombia'
+      },
+      {
+        name: 'ecuadorlocal',
+        uri: 'http://localhost:4200',
+        country: 'EC',
+        countryLabel: 'Ecuador'
+      }
+    ]);
   }
 
   getLanguages(country: string): Observable<LanguageConfig[]> {
+    /*
+    ** NOTA:
+    ** En la presente función se carga un listado de idiomas disponibles por pais
+    ** para los entornos de desarrollo y producción
+    ** 
     if(!environment.production) {
       let paises = [
         {
@@ -179,126 +198,23 @@ export class CountriesConfigService {
         }
       ].filter(lan => {return lan.country == country}).map(lan => {return lan.languages})[0]);
     }
-  }
-
-  getCurrencies(country: string): Observable<CurrencyConfig[]> {
-    if(!environment.production) {
-      return of([
-        {
-          country: 'PE',
-          currencies: <CurrencyConfig[]>[
-            {
-              name: 'Nuevo Sol Peruano',
-              label: 'PEN',
-              symbol: 'S/.'
-            },
-            {
-              name: 'Dólar estadounidense',
-              label: 'USD',
-              symbol: '$'
-            },
-            {
-              name: 'Euro',
-              label: 'EUR',
-              symbol: '€'
-            }
-          ]
-        },
-        {
-          country: 'CO',
-          currencies: <CurrencyConfig[]>[
-            {
-              name: 'Peso Colobiano',
-              label: 'COP',
-              symbol: '$'
-            },
-            {
-              name: 'Dólar estadounidense',
-              label: 'USD',
-              symbol: '$'
-            },
-            {
-              name: 'Euro',
-              label: 'EUR',
-              symbol: '€'
-            }
-          ]
-        },
-        {
-          country: 'EC',
-          currencies: <CurrencyConfig[]>[
-            {
-              name: 'Dólar estadounidense',
-              label: 'USD',
-              symbol: '$'
-            },
-            {
-              name: 'Euro',
-              label: 'EUR',
-              symbol: '€'
-            }
-          ]
-        }
-      ].filter(cu => {return cu.country == country}).map(cu => {return cu.currencies})[0]);
-    }
-    else {
-      return of([
-        {
-          country: 'PE',
-          currencies: <CurrencyConfig[]>[
-            {
-              name: 'Nuevo Sol Peruano',
-              label: 'PEN',
-              symbol: 'S/.'
-            },
-            {
-              name: 'Dólar estadounidense',
-              label: 'USD',
-              symbol: '$'
-            },
-            {
-              name: 'Euro',
-              label: 'EUR',
-              symbol: '€'
-            }
-          ]
-        },
-        {
-          country: 'CO',
-          currencies: <CurrencyConfig[]>[
-            {
-              name: 'Peso Colobiano',
-              label: 'COP',
-              symbol: '$'
-            },
-            {
-              name: 'Dólar estadounidense',
-              label: 'USD',
-              symbol: '$'
-            },
-            {
-              name: 'Euro',
-              label: 'EUR',
-              symbol: '€'
-            }
-          ]
-        },
-        {
-          country: 'EC',
-          currencies: <CurrencyConfig[]>[
-            {
-              name: 'Dólar estadounidense',
-              label: 'USD',
-              symbol: '$'
-            },
-            {
-              name: 'Euro',
-              label: 'EUR',
-              symbol: '€'
-            }
-          ]
-        }
-      ].filter(cu => {return cu.country == country}).map(cu => {return cu.currencies})[0]);
-    }
+    */
+    return of(<LanguageConfig[]>[
+      {
+        name: 'Español',
+        label: 'ES',
+        abrev: 'es'
+      },
+      {
+        name: 'Inglés',
+        label: 'EN',
+        abrev: 'en'
+      },
+      {
+        name: 'Italiano',
+        label: 'IT',
+        abrev: 'it'
+      }
+    ])
   }
 }

@@ -22,4 +22,8 @@ export class HomeComponent implements OnInit {
     this.SEOService.createCanonicalLink()
   }
 
+  getCountry() {
+    return localStorage.getItem("country");
+  }
+
 }
