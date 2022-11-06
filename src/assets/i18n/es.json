@@ -1,0 +1,30 @@
+{
+    "public": {
+        "nav": {
+            "home": "Inicio",
+            "about": "Nosotros",
+            "pricing": "Precios",
+            "faq": "Preguntas frecuentes",
+            "resources": "Recursos",
+            "blog": "Noticias",
+            "training": "Entrenamiento",
+            "dashboard": "Panel de usuario",
+            "my_account": "Mi Cuenta",
+            "login": "inicio de sesión",
+            "register": "Registro"
+        },
+        "footer": {
+            "description_company": "Somos una compañia que apuesta por la información. Generamos valor con sistemas que permiten estar cerca de tus clientes.",
+            "title_links": "Enlaces de interes",
+            "privacy": "Privacidad de la información",
+            "terms": "Terminos del servicio",
+            "company": "Grupo IO Data Perú",
+            "claims": "Libro de Reclamos",
+            "title_languages": "Selecciona otro idioma",
+            "title_countries": "Paises"
+        }
+    },
+    "home": {
+        "title": "Sistema para la gestión de centros educativos"
+    }
+}

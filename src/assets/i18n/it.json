@@ -1,0 +1,30 @@
+{
+    "public": {
+        "nav": {
+            "home": "Inizio",
+            "about": "Noi",
+            "pricing": "Prezzi",
+            "faq": "Domande frequenti",
+            "resources": "Risorse",
+            "blog": "Notizie",
+            "training": "Formazione",
+            "dashboard": "Dashboard",
+            "my_account": "Il mio account",
+            "login": "Entra",
+            "register": "Registrati"
+        },
+        "footer": {
+            "description_company": "Siamo un'azienda che scommette sull'informazione. Generiamo valore con sistemi che ti permettono di essere vicino ai tuoi clienti.",
+            "title_links": "Link interessanti",
+            "privacy": "Privacy delle informazioni",
+            "terms": "Termini di servizio",
+            "company": "Grupo IO Data Perú",
+            "claims": "Libro dei reclami",
+            "title_languages": "Seleziona un'altra lingua",
+            "title_countries": "Paesi"
+        }
+    },
+    "home": {
+        "title": "Sistema per la gestione degli immobili in vendita e in affitto"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "public": {
+        "nav": {
+            "home": "Home",
+            "about": "About",
+            "pricing": "Pricing",
+            "faq": "F.A.Q.",
+            "resources": "Resources",
+            "blog": "Blog",
+            "training": "Training",
+            "dashboard": "Dashboard",
+            "my_account": "My Account",
+            "login": "Login",
+            "register": "Register"
+        },
+        "footer": {
+            "description_company": "We are a company that bets on information. We generate value with systems that allow you to be close to your customers.",
+            "title_links": "Interesting links",
+            "privacy": "Information privacy",
+            "terms": "Terms of service",
+            "company": "Grupo IO Data Perú",
+            "claims": "Claim Book",
+            "title_languages": "Select another language",
+            "title_countries": "Countries"
+        }
+    },
+    "home": {
+        "title": "System for the management of properties for sale and rent"
+    }
+}
