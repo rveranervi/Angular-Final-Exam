@@ -6,12 +6,12 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/">{{ 'public.nav.home' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/movies">{{ 'public.nav.movies' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/shop">{{ 'public.nav.shop' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/search">{{ 'public.nav.search' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" *ngIf="this.isLogged()" style="cursor: pointer;" (click)="logout()">{{ 'public.nav.logout' | translate }}</a></li>
-                    <li class="nav-item"><a class="nav-link" *ngIf="!this.isLogged()" rel="canonical" routerLink="/login">{{ 'public.nav.login' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/"><i class="pi pi-home"></i> {{ 'public.nav.home' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/movies"><i class="pi pi-forward"></i> {{ 'public.nav.movies' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/shop"><i class="pi pi-shopping-bag"></i> {{ 'public.nav.shop' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" rel="canonical" routerLink="/cart"><i class="pi pi-shopping-cart"></i> {{ 'public.nav.cart' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" *ngIf="this.isLogged()" style="cursor: pointer;" (click)="logout()"><i class="pi pi-sign-out"></i> {{ 'public.nav.logout' | translate }}</a></li>
+                    <li class="nav-item"><a class="nav-link" *ngIf="!this.isLogged()" rel="canonical" routerLink="/login"><i class="pi pi-user"></i> {{ 'public.nav.login' | translate }}</a></li>
                 </ul>
             </div>
         </div>

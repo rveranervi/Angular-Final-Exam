@@ -24,6 +24,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MoviesComponent } from './pages/public/movies/movies.component';
 import { ShopComponent } from './pages/public/shop/shop.component';
 import { SearchComponent } from './pages/public/search/search.component';
+import { ShopDetailComponent } from './pages/public/shop-detail/shop-detail.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -39,7 +40,8 @@ export function createTranslateLoader(http: HttpClient) {
     LoginComponent,
     MoviesComponent,
     ShopComponent,
-    SearchComponent
+    SearchComponent,
+    ShopDetailComponent
   ],
   imports: [
     BrowserModule,

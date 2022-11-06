@@ -4,9 +4,9 @@
             "home": "Inicio",
             "movies": "Peliculas",
             "shop": "Ropa",
-            "search": "Busqueda con pipes",
+            "cart": "Carrito",
             "logout": "Cerrar sesión",
-            "login": "inicio de sesión"
+            "login": "Iniciar sesión"
         },
         "footer": {
             "title_languages": "Seleccione otro idioma",

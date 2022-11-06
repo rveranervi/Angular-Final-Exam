@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/public/login/login.component';
 import { MoviesComponent } from './pages/public/movies/movies.component';
 import { ShopComponent } from './pages/public/shop/shop.component';
 import { SearchComponent } from './pages/public/search/search.component';
+import { ShopDetailComponent } from './pages/public/shop-detail/shop-detail.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent, children: [
@@ -23,7 +24,11 @@ const routes: Routes = [
       component: ShopComponent,
     },
     {
-      path: 'search',
+      path: 'shop/detail/:id',
+      component: ShopDetailComponent,
+    },
+    {
+      path: 'cart',
       component: SearchComponent,
     },
     {

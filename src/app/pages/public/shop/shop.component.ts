@@ -12,6 +12,8 @@ export class ShopComponent implements OnInit {
 
   entries: ProductEntry[] = []
   showCharging: boolean = false
+  showMore: boolean = true
+  page: number = 1
 
   constructor(
     private SEOService: SeoService,
@@ -31,9 +33,14 @@ export class ShopComponent implements OnInit {
 
   getListEntries(){
     this.showCharging = true
-    this.service.list(0,9).subscribe((response: ProductEntry[]) => {
-      this.entries = response
+    let size = 6 
+    this.service.list(this.page, size).subscribe((response: ProductEntry[]) => {
+      this.page += 1;
+      this.entries.push(...response)
       this.showCharging = false
+      if(response.length < size){
+        this.showMore = false
+      }
     }, (error) => {
       console.log("ERROR")
       this.showCharging = false

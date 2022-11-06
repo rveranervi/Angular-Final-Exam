@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ConfirmationService } from 'primeng/api';
 import { MovieEntry, MovieRequest } from 'src/app/interfaces/content/movies';
 import { MoviesService } from 'src/app/services/content/movies.service';
@@ -17,6 +18,14 @@ export class MoviesComponent implements OnInit {
   showMore: boolean = true
   page: number = 1
   display: boolean = false;
+  movieForm = new FormGroup({
+    nombre: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(80)]),
+    genero: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(40)]),
+    director: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(90)]),
+    imagen: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(150)]),
+    pais: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
+    calificacion: new FormControl(0,[Validators.required, Validators.min(0), Validators.max(10)])
+  })
 
   constructor(
     private SEOService: SeoService,
@@ -58,14 +67,14 @@ export class MoviesComponent implements OnInit {
 
   addEntries(){
     this.service.insert(<MovieRequest>{
-      nombre: "string",
-      genero: "string",
-      director: "string",
-      imagen: "string",
-      pais: "string",
-      calificacion: 3
+      nombre: this.movieForm.value.nombre,
+      genero: this.movieForm.value.genero,
+      director: this.movieForm.value.director,
+      imagen: this.movieForm.value.imagen,
+      pais: this.movieForm.value.pais,
+      calificacion: this.movieForm.value.calificacion,
     }).subscribe((response)=>{
-      console.log(response)
+      window.location.reload()
     })
   }
 
@@ -84,6 +93,10 @@ export class MoviesComponent implements OnInit {
 
   showDialog() {
     this.display = true;
+  }
+
+  save() {
+    this.addEntries()
   }
   
 }

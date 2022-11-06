@@ -17,8 +17,8 @@
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2">Genero: {{ entry.genero }}</div> 
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2">Pais: {{ entry.pais }}</div> 
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2">
-                            <i class="pi pi-star" *ngFor="let n of [].constructor(10-entry.calificacion)"></i> 
                             <i class="pi pi-star-fill" *ngFor="let n of [].constructor(entry.calificacion)"></i> 
+                            <i class="pi pi-star" *ngFor="let n of [].constructor(10-entry.calificacion)"></i> 
                         </div> 
                         <div class="h5 card-title mb-3">{{ entry.nombre }}</div>
                         <button class="btn btn-danger" (click)="this.removeEntry(entry.id)">Eliminar</button>
@@ -34,8 +34,140 @@
         </div>
     </div>
 </section>
-<p-dialog [(visible)]="display" [header]="'Nueva pelicula'" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
-    Content
+<p-dialog [(visible)]="display" [baseZIndex]="10000" [modal]="true" [header]="'Nueva pelicula'" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+    <form [formGroup]="movieForm" (ngSubmit)="save(); movieForm.reset()">
+        <div class="form-group">
+            <label class="label">Nombre: </label>
+            <input type="text" name="nombre" class="form-control" formControlName="nombre" />
+
+            <div
+                *ngIf="!movieForm.errors && (movieForm.controls['nombre'].touched || movieForm.controls['nombre'].dirty)">
+
+                <div [hidden]="!movieForm.controls['nombre'].hasError('required')"
+                    class="alert alert-danger mt-2">
+                    Por favor el campo es obligatorio
+                </div>
+
+                <div [hidden]="!movieForm.controls['nombre'].hasError('minlength')"
+                    class="alert alert-danger mt-2">
+                    El campo debe tener más de 3 caracteres.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label class="label">Genero: </label>
+            <input type="text" name="genero" class="form-control" formControlName="genero" />
+
+            <div
+                *ngIf="!movieForm.errors && (movieForm.controls['genero'].touched || movieForm.controls['genero'].dirty)">
+
+                <div [hidden]="!movieForm.controls['genero'].hasError('required')"
+                    class="alert alert-danger mt-2">
+                    Por favor el campo es obligatorio
+                </div>
+
+                <div [hidden]="!movieForm.controls['genero'].hasError('minlength')"
+                    class="alert alert-danger mt-2">
+                    El campo debe tener más de 3 caracteres.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label class="label">Director: </label>
+            <input type="text" name="director" class="form-control" formControlName="director" />
+
+            <div
+                *ngIf="!movieForm.errors && (movieForm.controls['director'].touched || movieForm.controls['director'].dirty)">
+
+                <div [hidden]="!movieForm.controls['director'].hasError('required')"
+                    class="alert alert-danger mt-2">
+                    Por favor el campo es obligatorio
+                </div>
+
+                <div [hidden]="!movieForm.controls['director'].hasError('minlength')"
+                    class="alert alert-danger mt-2">
+                    El campo debe tener más de 3 caracteres.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label class="label">Imagen: </label>
+            <input type="text" name="imagen" class="form-control" formControlName="imagen" />
+
+            <div
+                *ngIf="!movieForm.errors && (movieForm.controls['imagen'].touched || movieForm.controls['imagen'].dirty)">
+
+                <div [hidden]="!movieForm.controls['imagen'].hasError('required')"
+                    class="alert alert-danger mt-2">
+                    Por favor el campo es obligatorio
+                </div>
+
+                <div [hidden]="!movieForm.controls['imagen'].hasError('minlength')"
+                    class="alert alert-danger mt-2">
+                    El campo debe tener más de 3 caracteres.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label class="label">Pais: </label>
+            <input type="text" name="pais" class="form-control" formControlName="pais" />
+
+            <div
+                *ngIf="!movieForm.errors && (movieForm.controls['pais'].touched || movieForm.controls['pais'].dirty)">
+
+                <div [hidden]="!movieForm.controls['pais'].hasError('required')"
+                    class="alert alert-danger mt-2">
+                    Por favor el campo es obligatorio
+                </div>
+
+                <div [hidden]="!movieForm.controls['pais'].hasError('minlength')"
+                    class="alert alert-danger mt-2">
+                    El campo debe tener más de 3 caracteres.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label class="label">Calificación: </label>
+            <input type="number" class="form-control" name="calificacion" formControlName="calificacion" />
+
+            <div
+                *ngIf="!movieForm.errors && (movieForm.controls['calificacion'].touched || movieForm.controls['calificacion'].dirty)">
+
+                <div [hidden]="!movieForm.controls['calificacion'].hasError('required')" class="alert alert-danger mt-2">
+                    El campo es obligatorio
+                </div>
+
+                <div [hidden]="!movieForm.controls['calificacion'].hasError('min')" class="alert alert-danger mt-2">
+                    La calificación debe ser mayor o igual a 0 
+                </div>
+
+                <div [hidden]="!movieForm.controls['calificacion'].hasError('max')" class="alert alert-danger mt-2">
+                    La calificación debe ser menor o igual a 10 
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-group mt-2">
+            <button class="btn btn-dark" [disabled]="!movieForm.valid">Guardar pelicula</button>
+        </div>
+    </form>
 </p-dialog>
 <p-confirmDialog [header]="'Eliminar pelicula'" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
     ¿Seguro de eliminar la pelicula?

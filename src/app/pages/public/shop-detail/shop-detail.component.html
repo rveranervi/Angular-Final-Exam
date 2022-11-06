@@ -1,0 +1,32 @@
+<!-- Page Content-->
+<section class="pt-5">
+    <div class="d-grid gap-2 d-md-block mx-auto text-center">
+        <h1 class="fw-bolder">{{ entry.nombre }}</h1>
+    </div>
+</section>
+<!-- Blog preview section-->
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top p-3" src="{{ entry.imagen }}" alt="{{ entry.nombre }}" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="inline" *ngIf="!added">
+                    <button class="btn btn-primary" (click)="this.disminuir()">-</button>
+                    <span class="btn border">{{ count }}</span>
+                    <button class="btn btn-primary" (click)="this.aumentar()">+</button>
+                    <button class="btn btn-success m-2" (click)="this.agregar()">Agregar al carrito</button>
+                </div>
+                <div class="mx-auto" *ngIf="added">
+                    <a class="btn btn-primary" [routerLink]="'/cart'">Ir al carrito</a>
+                </div>
+                <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{ entry.categoria }}</div>
+                <div class="h5 card-title mb-3">{{ entry.nombre }}</div>
+                <p class="card-text mb-0">{{ entry.detalle }}</p>
+            </div>
+        </div>
+    </div>
+</section>
