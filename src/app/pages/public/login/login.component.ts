@@ -18,8 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private messageService: MessageService,
-    private service: AuthService,
-    private router: Router
+    private service: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -36,10 +35,15 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.service.login(this.loginForm!).subscribe((response: LoginAuth) => {
-      localStorage.setItem('displayName', (response.displayName || ''))
-      localStorage.setItem('token', (response.token || ''))
-      this.messageService.add({severity:'success', summary: 'Correcto', detail:'Inicio sesión correctamente.'});
+    this.service.login(this.loginForm!).subscribe((response: LoginAuth[]) => {
+      if(response.length > 0) {
+        localStorage.setItem('displayName', (response[0].displayName || ''))
+        localStorage.setItem('token', (response[0].token || ''))
+        this.messageService.add({severity:'success', summary: 'Correcto', detail:'Inicio sesión correctamente.'});
+      }
+      else {
+        this.messageService.add({severity:'error', summary: 'Ocurrio un error', detail: "No se encontró el usuario"});
+      }
     },
     (error: HttpErrorResponse) => {
       this.messageService.add({severity:'error', summary: 'Ocurrio un error', detail: error.error});

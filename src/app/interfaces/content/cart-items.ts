@@ -9,5 +9,6 @@ export interface ProductCart {
     marca: string,
     categoria: string,
     imagen: string,
+    precio: number,
     quantity: number
 }

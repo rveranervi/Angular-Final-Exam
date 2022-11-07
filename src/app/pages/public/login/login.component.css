@@ -1,4 +1,5 @@
 #layoutAuthentication {
     min-height: 100vh;
-    background-color: bisque;
+    background: url(https://p.calameoassets.com/210616082146-ca383695bf1ae341d6fa0c5e18f372ba/p1.jpg);
+    background-size: cover;
 }

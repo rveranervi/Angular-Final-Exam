@@ -5,5 +5,5 @@ export interface ProductEntry {
     categoria: string,
     imagen: string,
     detalle: string,
-    calificacion: number
+    precio: number
 }

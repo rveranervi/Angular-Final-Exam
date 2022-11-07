@@ -1,6 +1,26 @@
-# RealEstate
+# Examen Final Java Front Cibertec
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+
+## Preguntas del examen
+
+1. Listado de peliculas: Listar, Agregar y eliminar. Con API SERVER en json server
+2. Listado de productos de vestir: Listar y ver detalle. Con API SERVER en json server
+3. Realizar una busqueda con pipes customizados
+4. Pregunta teorica
+    - Respuesta
+
+## Screenshots del sistema
+
+![This is an image](src/assets/images/screenshots/screen1.png)
+![This is an image](src/assets/images/screenshots/screen2.png)
+![This is an image](src/assets/images/screenshots/screen3.png)
+![This is an image](src/assets/images/screenshots/screen4.png)
+![This is an image](src/assets/images/screenshots/screen5.png)
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 
 ## Development server
 

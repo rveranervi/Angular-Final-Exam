@@ -14,6 +14,7 @@
                 </div>
             </div>
             <div class="col-6">
+                <button class="btn btn-warning mb-1" (click)="this.back()"><i class="pi pi-angle-left"></i>Regresar</button>
                 <div class="inline" *ngIf="!added">
                     <button class="btn btn-primary" (click)="this.disminuir()">-</button>
                     <span class="btn border">{{ count }}</span>
@@ -23,8 +24,9 @@
                 <div class="mx-auto" *ngIf="added">
                     <a class="btn btn-primary" [routerLink]="'/cart'">Ir al carrito</a>
                 </div>
+                <div class="h5 card-title my-3">{{ entry.nombre }}</div>
+                <div class="h2 card-title mb-3">PRECIO: {{ entry.precio | currency: 'PEN': 'symbol': '' }}</div>
                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{ entry.categoria }}</div>
-                <div class="h5 card-title mb-3">{{ entry.nombre }}</div>
                 <p class="card-text mb-0">{{ entry.detalle }}</p>
             </div>
         </div>

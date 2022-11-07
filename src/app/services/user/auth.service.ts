@@ -14,15 +14,12 @@ export class AuthService {
     private httpClient: HttpClient
   ) { }
 
-  login(form: FormGroup): Observable<LoginAuth> {
-    /*return this.httpClient.post<LoginAuth>(environment.apiUrl + '/school/school/login',
-    { 
-      email: form.get('email')?.value || '',
-      password: form.get('password')?.value || ''
-    });*/
-    return of(<LoginAuth>{
-      displayName: "Ricardo Vera",
-      token: "dkdksksdksjkjdksjksdjd"
-    })
+  login(form: FormGroup): Observable<LoginAuth[]> {
+    return this.httpClient.get<LoginAuth[]>(environment.apiUrl + '/user', {
+      params: {
+        "email": form.get('email')?.value || '',
+        "password": form.get('password')?.value || ''
+      }
+    });
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductEntry } from 'src/app/interfaces/content/products';
 import { ProductsService } from 'src/app/services/content/products.service';
 import { SeoService } from 'src/app/services/util/seo.service';
@@ -18,12 +18,13 @@ export class ShopDetailComponent implements OnInit {
     categoria: '',
     imagen: '',
     detalle: '',
-    calificacion: 0
+    precio: 0
   };
   count = 1
   added: boolean = false
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private SEOService: SeoService,
     private service: ProductsService
@@ -55,6 +56,10 @@ export class ShopDetailComponent implements OnInit {
   agregar() {
     this.service.addToCart({product: this.entry.id, quantity: this.count})
     this.getProductDetail()
+  }
+
+  back() {
+    this.router.navigate(['/shop'])
   }
 
 }

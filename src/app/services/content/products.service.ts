@@ -39,6 +39,17 @@ export class ProductsService {
     }
   }
 
+  deleteToCart(itemID: number) {
+    this.items = JSON.parse(localStorage.getItem("cart_items") || '[]') ?? []
+    this.items = this.items.filter(e => {return e.product!=itemID})
+    localStorage.setItem('cart_items', JSON.stringify(this.items)); 
+  }
+
+  clearCart() {
+    this.items = []
+    localStorage.setItem('cart_items', JSON.stringify(this.items)); 
+  }
+
   existProductInCart(productID: number) {
     this.items = JSON.parse(localStorage.getItem("cart_items") || '[]') ?? []
     return (this.items.filter(e => {return e.product==productID}).length > 0)
