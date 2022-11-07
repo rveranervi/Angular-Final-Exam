@@ -11,12 +11,12 @@
         <div class="row gx-5">
             <div class="col-lg-3 mb-5" *ngFor="let entry of this.entries">
                 <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="{{ entry.imagen }}" alt="{{ entry.nombre }}" />
+                    <img class="card-img-top" src="{{ entry.imagen }}" alt="{{ entry.nombre }}" title="{{ entry.nombre }}" />
                     <div class="card-body p-4">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Director: {{ entry.director }}</div> 
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Genero: {{ entry.genero }}</div> 
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Pais: {{ entry.pais }}</div> 
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.director">Director: {{ entry.director }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.genero">Genero: {{ entry.genero }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.pais">Pais: {{ entry.pais }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.calificacion+' estrellas'">
                             <i class="pi pi-star-fill" *ngFor="let n of [].constructor(entry.calificacion)"></i> 
                             <i class="pi pi-star" *ngFor="let n of [].constructor(10-entry.calificacion)"></i> 
                         </div> 

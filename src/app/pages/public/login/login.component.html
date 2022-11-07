@@ -11,13 +11,35 @@
                                     <div class="form-floating mb-3">
                                         <input class="form-control" formControlName="email" type="email" placeholder="name@example.com" />
                                         <label for="inputEmail">Correo electrónico</label>
+                                        <div
+                                            *ngIf="!loginForm.errors && (loginForm.controls['email'].touched || loginForm.controls['email'].dirty)">
+                                            <div [hidden]="!loginForm.controls['email'].hasError('required')"
+                                                class="alert alert-danger mt-2">
+                                                Por favor el campo es obligatorio
+                                            </div>
+                                            <div [hidden]="!loginForm.controls['email'].hasError('email')"
+                                                class="alert alert-danger mt-2">
+                                                El campo debe tener formato de email.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input class="form-control" formControlName="password" type="password" placeholder="Password" />
                                         <label for="inputPassword">Contraseña</label>
+                                        <div
+                                            *ngIf="!loginForm.errors && (loginForm.controls['password'].touched || loginForm.controls['password'].dirty)">
+                                            <div [hidden]="!loginForm.controls['password'].hasError('required')"
+                                                class="alert alert-danger mt-2">
+                                                Por favor el campo es obligatorio
+                                            </div>
+                                            <div [hidden]="!loginForm.controls['password'].hasError('minlength')"
+                                                class="alert alert-danger mt-2">
+                                                El campo debe tener más de 4 caracteres.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <button class="btn btn-primary" type="button" (click)="login()">Ingresar</button>
+                                        <button class="btn btn-primary" type="button" (click)="login()" [disabled]="this.isLogged()">Ingresar</button>
                                     </div>
                                 </form>
                             </div>

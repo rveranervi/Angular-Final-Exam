@@ -17,11 +17,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![Pregunta 1 listado](src/assets/images/screenshots/screen2.png)
 - Página de peliculas: Resolución de la pregunta 1 del examen
 ![Pregunta 1 creación](src/assets/images/screenshots/screen3.png)
-- Página de peliculas: Resolución de la pregunta 2 del examen
+- Página de tienda: Resolución de la pregunta 2 del examen
 ![Pregunta 2 listado](src/assets/images/screenshots/screen4.png)
-- Página de peliculas: Resolución de la pregunta 2 del examen
+- Página de tienda: Resolución de la pregunta 2 del examen
 ![Pregunta 2 detalle](src/assets/images/screenshots/screen5.png)
-- Página de peliculas: Resolución de la pregunta 3 del examen
+- Página de busqueda: Resolución de la pregunta 3 del examen
 ![Pregunta 3](src/assets/images/screenshots/screen6.png)
 
 ## Development server

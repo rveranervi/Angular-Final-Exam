@@ -1,0 +1,177 @@
+{
+  "movies": [
+    {
+      "nombre": "Dahmer Monstruo: La historia de Jeffrey Dahmer",
+      "genero": "Crimen - Drama",
+      "director": "Ryan Murphy",
+      "imagen": "https://image.tmdb.org/t/p/w300/vlUMBgKO1HOwPMJwHnHzr99BHwN.jpg?x79441",
+      "pais": "EE.UU",
+      "calificacion": 9,
+      "id": 1
+    },
+    {
+      "nombre": "RRR (2022)",
+      "genero": "Acción - Bélica - Drama",
+      "director": "S. S. Rajamouli",
+      "imagen": "https://image.tmdb.org/t/p/w300/hmDNYJkVdooSTNej2AnWV0nbH3q.jpg?x79441",
+      "pais": "India",
+      "calificacion": 7,
+      "id": 2
+    },
+    {
+      "nombre": "Smile (2022)",
+      "genero": "Misterio - Suspense - Terror",
+      "director": "Parker Finn",
+      "imagen": "https://image.tmdb.org/t/p/w300/aw05OSgJFxsMiLAN0UQG2gCdTGY.jpg?x79441",
+      "pais": "EE.UU",
+      "calificacion": 4,
+      "id": 3
+    },
+    {
+      "nombre": "Spider-Man: No Way Home (2021)",
+      "genero": "Acción - Superheroes - Ciencia ficción",
+      "director": "David H. Venghaus Jr.",
+      "imagen": "https://image.tmdb.org/t/p/w300/osYbtvqjMUhEXgkuFJOsRYVpq6N.jpg?x79441",
+      "pais": "EE.UU",
+      "calificacion": 9,
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 2,
+      "nombre": "Zapatillas Correr Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 3,
+      "nombre": "Zapatillas Sport Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 4,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 5,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 6,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 7,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 8,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 9,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 10,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 11,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 12,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 13,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    },
+    {
+      "id": 14,
+      "nombre": "Zapatillas Urbanas Hombre CourtBeat",
+      "marca": "Adidas",
+      "categoria": "Zapatillas",
+      "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
+      "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
+      "precio": 229
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email": "lamolina@trilce.edu.pe",
+      "password": "abc123",
+      "displayName": "Ricardo Vera",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlJpY2FyZG8gVmVyYSIsImlhdCI6MTUxNjIzOTAyMn0.hFBeSBmAlD6M9WVQ8ixG1ZpNSGsJdt2hsJD_djVnEMo"
+    }
+  ]
+}

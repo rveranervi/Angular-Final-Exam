@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = new FormGroup({
       email: new FormControl('lamolina@trilce.edu.pe', [
         Validators.required,
-        Validators.minLength(4)
+        Validators.email
       ]),
       password: new FormControl('abc123', [
         Validators.required,
@@ -48,6 +48,18 @@ export class LoginComponent implements OnInit {
     (error: HttpErrorResponse) => {
       this.messageService.add({severity:'error', summary: 'Ocurrio un error', detail: error.error});
     });
+  }
+
+  isLogged() {
+    if(
+      localStorage.getItem('displayName') == null || 
+      localStorage.getItem('token') == null
+    ) {
+      return false
+    }
+    else {
+      return true
+    }
   }
 
 }
