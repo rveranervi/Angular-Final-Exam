@@ -23,7 +23,8 @@ export class MoviesComponent implements OnInit {
     genero: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(40)]),
     director: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(90)]),
     imagen: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(150)]),
-    pais: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
+    estreno: new FormControl('',[Validators.required, Validators.min(1900), Validators.max(2023)]),
+    duracion: new FormControl('',[Validators.required, Validators.min(15), Validators.max(380)]),
     calificacion: new FormControl(0,[Validators.required, Validators.min(0), Validators.max(10)])
   })
 
@@ -71,8 +72,9 @@ export class MoviesComponent implements OnInit {
       genero: this.movieForm.value.genero,
       director: this.movieForm.value.director,
       imagen: this.movieForm.value.imagen,
-      pais: this.movieForm.value.pais,
-      calificacion: this.movieForm.value.calificacion,
+      estreno: this.movieForm.value.estreno || 0,
+      duracion: this.movieForm.value.duracion || 0,
+      calificacion: this.movieForm.value.calificacion || 0
     }).subscribe((response)=>{
       window.location.reload()
     })

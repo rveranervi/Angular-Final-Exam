@@ -11,7 +11,7 @@
             <div class="alert alert-primary" role="alert" *ngIf="products.length == 0">
                 Agregue productos desde <a routerLink="/shop">la tienda de ropa</a>
             </div>
-            <input type="email" class="form-control" placeholder="Buscar por nombre, categoria o marca" [readonly]="products.length == 0" [(ngModel)]="searching">
+            <input type="email" class="form-control" placeholder="Buscar por marca o precio" [readonly]="products.length == 0" [(ngModel)]="searching">
         </div>
     </div>
 </section>

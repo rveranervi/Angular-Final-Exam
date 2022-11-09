@@ -2,9 +2,10 @@ export interface MovieEntry {
     id: number,
     nombre: string,
     genero: string,
+    estreno: number,
+    duracion: number,
     director: string,
     imagen: string,
-    pais: string,
     calificacion: number
 }
 
@@ -13,6 +14,7 @@ export interface MovieRequest {
     genero: string,
     director: string,
     imagen: string,
-    pais: string,
+    estreno: number,
+    duracion: number,
     calificacion: number
 }

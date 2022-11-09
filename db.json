@@ -3,38 +3,52 @@
     {
       "nombre": "Dahmer Monstruo: La historia de Jeffrey Dahmer",
       "genero": "Crimen - Drama",
+      "estreno": 2022,
+      "duracion": 110,
       "director": "Ryan Murphy",
       "imagen": "https://image.tmdb.org/t/p/w300/vlUMBgKO1HOwPMJwHnHzr99BHwN.jpg?x79441",
-      "pais": "EE.UU",
       "calificacion": 9,
       "id": 1
     },
     {
       "nombre": "RRR (2022)",
       "genero": "Acción - Bélica - Drama",
+      "estreno": 2022,
+      "duracion": 110,
       "director": "S. S. Rajamouli",
       "imagen": "https://image.tmdb.org/t/p/w300/hmDNYJkVdooSTNej2AnWV0nbH3q.jpg?x79441",
-      "pais": "India",
       "calificacion": 7,
       "id": 2
     },
     {
       "nombre": "Smile (2022)",
       "genero": "Misterio - Suspense - Terror",
+      "estreno": 2022,
+      "duracion": 110,
       "director": "Parker Finn",
       "imagen": "https://image.tmdb.org/t/p/w300/aw05OSgJFxsMiLAN0UQG2gCdTGY.jpg?x79441",
-      "pais": "EE.UU",
       "calificacion": 4,
       "id": 3
     },
     {
       "nombre": "Spider-Man: No Way Home (2021)",
       "genero": "Acción - Superheroes - Ciencia ficción",
+      "estreno": 2021,
+      "duracion": 110,
       "director": "David H. Venghaus Jr.",
       "imagen": "https://image.tmdb.org/t/p/w300/osYbtvqjMUhEXgkuFJOsRYVpq6N.jpg?x79441",
-      "pais": "EE.UU",
       "calificacion": 9,
       "id": 4
+    },
+    {
+      "nombre": "Dragon Ball Super: Super Hero (2022)",
+      "genero": "Acción - Animación",
+      "director": "Tetsuro Kodama",
+      "imagen": "https://image.tmdb.org/t/p/w300/gPwXtxnEgppVaMsrpPNajw1K7LH.jpg?x79441",
+      "estreno": "2022",
+      "duracion": "100",
+      "calificacion": 7,
+      "id": 5
     }
   ],
   "products": [
@@ -45,25 +59,25 @@
       "categoria": "Zapatillas",
       "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
       "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
-      "precio": 229
+      "precio": 180.5
     },
     {
       "id": 2,
       "nombre": "Zapatillas Correr Hombre CourtBeat",
-      "marca": "Adidas",
+      "marca": "Puma",
       "categoria": "Zapatillas",
       "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
       "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
-      "precio": 229
+      "precio": 160.29
     },
     {
       "id": 3,
       "nombre": "Zapatillas Sport Hombre CourtBeat",
-      "marca": "Adidas",
+      "marca": "Nike",
       "categoria": "Zapatillas",
       "imagen": "https://falabella.scene7.com/is/image/FalabellaPE/19020982?wid=240&hei=240&qlt=70",
       "detalle": "Inspirándose en la rica historia de adidas en el calzado de tenis, estos zapatos de estilo de vida combinan vibraciones icónicas con estilo y ajuste modernos. Una parte superior suave y duradera envuelve tu pie con comodidad ceñida. La clásica suela tipo cupsole de goma completa el look retro mientras amortigua cada pisada. Fabricada con una serie de materiales reciclados, la parte superior presenta al menos un 50 % de contenido reciclado. Este producto representa solo una de nuestras soluciones para ayudar a acabar con los residuos plásticos.",
-      "precio": 229
+      "precio": 229.8
     },
     {
       "id": 4,

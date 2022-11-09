@@ -15,7 +15,8 @@
                     <div class="card-body p-4">
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.director">Director: {{ entry.director }}</div> 
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.genero">Genero: {{ entry.genero }}</div> 
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.pais">Pais: {{ entry.pais }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.estreno">Estreno: {{ entry.estreno }}</div> 
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.duracion+' minutos'">Duración: {{ entry.duracion }} min.</div> 
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2" [title]="entry.calificacion+' estrellas'">
                             <i class="pi pi-star-fill" *ngFor="let n of [].constructor(entry.calificacion)"></i> 
                             <i class="pi pi-star" *ngFor="let n of [].constructor(10-entry.calificacion)"></i> 
@@ -121,20 +122,46 @@
 
 
         <div class="form-group">
-            <label class="label">Pais: </label>
-            <input type="text" name="pais" class="form-control" formControlName="pais" />
+            <label class="label">Año de Estreno: (1900 - 2023)</label>
+            <input type="number" name="estreno" class="form-control" formControlName="estreno" />
 
             <div
-                *ngIf="!movieForm.errors && (movieForm.controls['pais'].touched || movieForm.controls['pais'].dirty)">
+                *ngIf="!movieForm.errors && (movieForm.controls['estreno'].touched || movieForm.controls['estreno'].dirty)">
 
-                <div [hidden]="!movieForm.controls['pais'].hasError('required')"
+                <div [hidden]="!movieForm.controls['estreno'].hasError('required')"
                     class="alert alert-danger mt-2">
                     Por favor el campo es obligatorio
                 </div>
 
-                <div [hidden]="!movieForm.controls['pais'].hasError('minlength')"
+                <div [hidden]="!movieForm.controls['estreno'].hasError('min')" class="alert alert-danger mt-2">
+                    La calificación debe ser mayor o igual a 1900
+                </div>
+
+                <div [hidden]="!movieForm.controls['estreno'].hasError('max')" class="alert alert-danger mt-2">
+                    La calificación debe ser menor o igual a 2023
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="label">Duración: (15 - 380) (minutos)</label>
+            <input type="number" name="duracion" class="form-control" formControlName="duracion" />
+
+            <div
+                *ngIf="!movieForm.errors && (movieForm.controls['duracion'].touched || movieForm.controls['duracion'].dirty)">
+
+                <div [hidden]="!movieForm.controls['duracion'].hasError('required')"
                     class="alert alert-danger mt-2">
-                    El campo debe tener más de 3 caracteres.
+                    Por favor el campo es obligatorio
+                </div>
+
+                <div [hidden]="!movieForm.controls['duracion'].hasError('min')" class="alert alert-danger mt-2">
+                    La calificación debe ser mayor o igual a 15 
+                </div>
+
+                <div [hidden]="!movieForm.controls['duracion'].hasError('max')" class="alert alert-danger mt-2">
+                    La calificación debe ser menor o igual a 380 
                 </div>
             </div>
 

@@ -10,19 +10,10 @@ export class SearchingPipe implements PipeTransform {
     if(consulta === '') return value;
     return value.filter((p) => {
       return (
-        p.nombre.toLowerCase().indexOf(consulta.toLowerCase())>-1 ||
-        p.categoria.toLowerCase().indexOf(consulta.toLowerCase())>-1 ||
-        p.marca.toLowerCase().indexOf(consulta.toLowerCase())>-1
+        p.marca.toLowerCase().indexOf(consulta.toLowerCase())>-1 ||
+        p.precio.toString().indexOf(consulta.toLowerCase())>-1
       )
     })
-/*
-    for(const plato of value){
-      if(plato.nombre.toLowerCase().indexOf(consulta.toLowerCase())>-1){
-        resultado.push(plato)
-      }
-    }
-    return resultado;
-*/
   }
 
 }
